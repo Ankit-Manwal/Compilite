@@ -1,0 +1,241 @@
+/* General Styles */
+body {
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode {
+    background-color: #212529;
+    color: #fff;
+}
+
+/* Code Editor */
+.CodeMirror {
+    height: 400px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.dark-mode .CodeMirror {
+    border-color: #444;
+}
+
+/* Code Blocks */
+.code-block {
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 1rem;
+    margin: 0;
+    font-family: monospace;
+    white-space: pre-wrap;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.output-block {
+    background-color: #212529;
+    color: #fff;
+    border: none;
+    padding: 1rem;
+    font-family: 'Consolas', 'Monaco', monospace;
+    font-size: 14px;
+    line-height: 1.5;
+    min-height: 100px;
+}
+
+.dark-mode .output-block {
+    background-color: #1a1a1a;
+    border: 1px solid #444;
+}
+
+.dark-mode .code-block {
+    background-color: #1a1a1a;
+    border-color: #444;
+    color: #fff;
+}
+
+/* AST Visualization */
+#astVisualization {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.dark-mode #astVisualization {
+    background-color: #2d2d2d;
+    border-color: #444;
+}
+
+/* Cards */
+.card {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s;
+}
+
+.dark-mode .card {
+    background-color: #2d2d2d;
+    border-color: #444;
+}
+
+.card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Tabs */
+.nav-tabs .nav-link {
+    color: #495057;
+}
+
+.dark-mode .nav-tabs .nav-link {
+    color: #fff;
+}
+
+.dark-mode .nav-tabs .nav-link.active {
+    background-color: #2d2d2d;
+    border-color: #444;
+    color: #fff;
+}
+
+/* Tables */
+.dark-mode .table {
+    color: #fff;
+}
+
+.dark-mode .table thead th {
+    border-color: #444;
+}
+
+.dark-mode .table td {
+    border-color: #444;
+}
+
+/* AST Node Styles */
+.ast-node {
+    padding: 8px;
+    border-radius: 4px;
+    font-family: 'Fira Code', monospace;
+    font-size: 12px;
+}
+
+.ast-node.function {
+    background-color: #e3f2fd;
+}
+
+.ast-node.statement {
+    background-color: #f3e5f5;
+}
+
+.ast-node.expression {
+    background-color: #e8f5e9;
+}
+
+.ast-node.literal {
+    background-color: #fff3e0;
+}
+
+.dark-mode .ast-node {
+    border: 1px solid #444;
+}
+
+.dark-mode .ast-node.function {
+    background-color: #1a237e;
+}
+
+.dark-mode .ast-node.statement {
+    background-color: #4a148c;
+}
+
+.dark-mode .ast-node.expression {
+    background-color: #1b5e20;
+}
+
+.dark-mode .ast-node.literal {
+    background-color: #e65100;
+}
+
+/* Buttons */
+.btn {
+    transition: all 0.3s;
+}
+
+.dark-mode .btn-secondary {
+    background-color: #424242;
+    border-color: #616161;
+}
+
+.dark-mode .btn-secondary:hover {
+    background-color: #616161;
+    border-color: #757575;
+}
+
+/* Error Modal */
+.dark-mode .modal-content {
+    background-color: #2d2d2d;
+    border-color: #444;
+}
+
+.dark-mode .modal-header {
+    border-bottom-color: #444;
+}
+
+.dark-mode .modal-footer {
+    border-top-color: #444;
+}
+
+/* Scrollbars */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.dark-mode ::-webkit-scrollbar-track {
+    background: #1a1a1a;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* Loading Indicator */
+.loading-spinner {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.loading-spinner.show {
+    display: block;
+}
+
+.ast-tree {
+    font-family: monospace;
+    white-space: pre;
+    padding: 1rem;
+    margin: 0;
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    overflow-x: auto;
+}
+
+body.dark-mode .card-header {
+    background-color: #1a1a1a;
+    border-bottom-color: #444;
+}
+
+body.dark-mode .ast-tree {
+    background-color: #1a1a1a;
+    border-color: #444;
+    color: #fff;
+} 

@@ -1,0 +1,45 @@
+FUNCTION main:
+LOAD #5, t0
+STORE t0, x
+LOAD #10, t1
+STORE t1, y
+LOAD x, t2
+LOAD y, t3
+LOAD #2, t4
+MUL t3, t4, t5
+ADD t2, t5, t6
+STORE t6, z
+LOAD z, t7
+LOAD #20, t8
+GT t7, t8, t9
+IF_FALSE t9, GOTO L0
+LOAD "z is greater than 20", t10
+PRINT t10
+LOAD x, t11
+LOAD #1, t12
+ADD t11, t12, t13
+STORE t13, x
+GOTO L1
+LABEL L0:
+LOAD "z is 20 or less", t14
+PRINT t14
+LOAD y, t15
+LOAD #1, t16
+SUB t15, t16, t17
+STORE t17, y
+LABEL L1:
+LABEL L2:
+LOAD x, t18
+LOAD y, t19
+LT t18, t19, t20
+IF_FALSE t20, GOTO L3
+LOAD x, t21
+LOAD #1, t22
+ADD t21, t22, t23
+STORE t23, x
+LOAD x, t24
+PRINT t24
+GOTO L2
+LABEL L3:
+LOAD z, t25
+RETURN t25

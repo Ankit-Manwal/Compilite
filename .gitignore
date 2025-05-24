@@ -1,0 +1,37 @@
+# Python virtual environments
+.venv/
+.venv.*
+venv/
+
+# Environment files
+.env
+.env.*
+
+# Compiled files
+*.exe
+*.dll
+*.so
+*.dylib
+*.pdb
+*.obj
+*.class
+
+# Compiled Python files
+__pycache__/
+*.pyc
+
+# IDE files
+.idea/
+.vscode/
+
+# OS files
+.DS_Store
+thumbs.db
+
+# Log files
+*.log
+
+# Python packaging
+dist/
+build/
+*.egg-info/

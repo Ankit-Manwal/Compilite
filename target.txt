@@ -1,0 +1,98 @@
+section .data
+    format_int db '%d', 10, 0
+    format_str db '%s', 10, 0
+    var_x dd 0
+    var_y dd 0
+    var_z dd 0
+    str_0 db 'z is greater than 20', 0
+    str_1 db 'z is 20 or less', 0
+
+section .text
+    global main
+    extern printf
+; FUNCTION main:
+main:
+    push ebp
+    mov ebp, esp
+    mov ebx, 5
+    mov [var_x], ecx
+    mov edx, 10
+    mov [var_y], ebx
+    mov ecx, [var_x]
+    mov edx, [var_y]
+    mov ebx, 2
+    mov eax, edx
+    imul ebx
+    mov ecx, eax
+    mov ecx, edx
+    add ecx, ebx
+    mov [var_z], ecx
+    mov edx, [var_z]
+    mov ebx, 20
+    cmp edx, ebx
+    mov ecx, 0
+    setg al
+    movzx ecx, al
+    cmp ecx, 0
+    je L0
+    mov edx, str_0
+    push ebx
+    push ecx
+    push dword [edx]
+    push dword format_int
+    call printf
+    add esp, 8
+    pop ecx
+    pop ebx
+    mov ebx, [var_x]
+    mov ecx, 1
+    mov edx, ebx
+    add edx, ecx
+    mov [var_x], edx
+    jmp L1
+L0:
+    mov ebx, str_1
+    push ebx
+    push ecx
+    push dword [ebx]
+    push dword format_int
+    call printf
+    add esp, 8
+    pop ecx
+    pop ebx
+    mov ecx, [var_y]
+    mov edx, 1
+    mov ebx, ecx
+    sub ebx, edx
+    mov [var_y], ebx
+L1:
+L2:
+    mov ecx, [var_x]
+    mov edx, [var_y]
+    cmp ecx, edx
+    mov ebx, 0
+    setl al
+    movzx ebx, al
+    cmp ebx, 0
+    je L3
+    mov ecx, [var_x]
+    mov edx, 1
+    mov ebx, ecx
+    add ebx, edx
+    mov [var_x], ebx
+    mov ecx, [var_x]
+    push ebx
+    push ecx
+    push dword [ecx]
+    push dword format_int
+    call printf
+    add esp, 8
+    pop ecx
+    pop ebx
+    jmp L2
+L3:
+    mov edx, [var_z]
+    mov eax, edx
+    mov esp, ebp
+    pop ebp
+    ret

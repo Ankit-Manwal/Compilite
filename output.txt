@@ -1,0 +1,262 @@
+=== Program Execution Output ===
+
+
+DEBUG - Starting program simulation
+
+DEBUG - Executing node: {'type': 'function_declaration', 'return_type': 'int', 'name': 'main', 'parameters': [], 'body': [{'type': 'variable_declaration', 'var_type': 'int', 'name': 'x', 'initializer': {'type': 'number_literal', 'value': '5'}}, {'type': 'variable_declaration', 'var_type': 'int', 'name': 'y', 'initializer': {'type': 'number_literal', 'value': '10'}}, {'type': 'variable_declaration', 'var_type': 'int', 'name': 'z', 'initializer': {'type': 'binary_expression', 'operator': '+', 'left': {'type': 'identifier', 'name': 'x'}, 'right': {'type': 'binary_expression', 'operator': '*', 'left': {'type': 'identifier', 'name': 'y'}, 'right': {'type': 'number_literal', 'value': '2'}}}}, {'type': 'if_statement', 'condition': {'type': 'binary_expression', 'operator': '>', 'left': {'type': 'identifier', 'name': 'z'}, 'right': {'type': 'number_literal', 'value': '20'}}, 'consequent': [{'type': 'print_statement', 'expression': {'type': 'string_literal', 'value': '"z is greater than 20"'}}, {'type': 'expression_statement', 'expression': {'type': 'assignment_expression', 'left': {'type': 'identifier', 'name': 'x'}, 'right': {'type': 'binary_expression', 'operator': '+', 'left': {'type': 'identifier', 'name': 'x'}, 'right': {'type': 'number_literal', 'value': '1'}}}}], 'alternate': [{'type': 'print_statement', 'expression': {'type': 'string_literal', 'value': '"z is 20 or less"'}}, {'type': 'expression_statement', 'expression': {'type': 'assignment_expression', 'left': {'type': 'identifier', 'name': 'y'}, 'right': {'type': 'binary_expression', 'operator': '-', 'left': {'type': 'identifier', 'name': 'y'}, 'right': {'type': 'number_literal', 'value': '1'}}}}]}, {'type': 'while_statement', 'condition': {'type': 'binary_expression', 'operator': '<', 'left': {'type': 'identifier', 'name': 'x'}, 'right': {'type': 'identifier', 'name': 'y'}}, 'body': [{'type': 'expression_statement', 'expression': {'type': 'assignment_expression', 'left': {'type': 'identifier', 'name': 'x'}, 'right': {'type': 'binary_expression', 'operator': '+', 'left': {'type': 'identifier', 'name': 'x'}, 'right': {'type': 'number_literal', 'value': '1'}}}}, {'type': 'print_statement', 'expression': {'type': 'identifier', 'name': 'x'}}]}, {'type': 'return_statement', 'expression': {'type': 'number_literal', 'value': '0'}}]}
+DEBUG - Executing function declaration
+
+DEBUG - Executing node: {'type': 'variable_declaration', 'var_type': 'int', 'name': 'x', 'initializer': {'type': 'number_literal', 'value': '5'}}
+
+DEBUG - Evaluating expression: {'type': 'number_literal', 'value': '5'}
+DEBUG - Number literal value: 5
+DEBUG - Declared variable x = 5
+DEBUG - Current variables: {'x': 5}
+
+DEBUG - Executing node: {'type': 'variable_declaration', 'var_type': 'int', 'name': 'y', 'initializer': {'type': 'number_literal', 'value': '10'}}
+
+DEBUG - Evaluating expression: {'type': 'number_literal', 'value': '10'}
+DEBUG - Number literal value: 10
+DEBUG - Declared variable y = 10
+DEBUG - Current variables: {'x': 5, 'y': 10}
+
+DEBUG - Executing node: {'type': 'variable_declaration', 'var_type': 'int', 'name': 'z', 'initializer': {'type': 'binary_expression', 'operator': '+', 'left': {'type': 'identifier', 'name': 'x'}, 'right': {'type': 'binary_expression', 'operator': '*', 'left': {'type': 'identifier', 'name': 'y'}, 'right': {'type': 'number_literal', 'value': '2'}}}}
+
+DEBUG - Evaluating expression: {'type': 'binary_expression', 'operator': '+', 'left': {'type': 'identifier', 'name': 'x'}, 'right': {'type': 'binary_expression', 'operator': '*', 'left': {'type': 'identifier', 'name': 'y'}, 'right': {'type': 'number_literal', 'value': '2'}}}
+
+DEBUG - Evaluating expression: {'type': 'identifier', 'name': 'x'}
+DEBUG - Identifier 'x' value: 5
+
+DEBUG - Evaluating expression: {'type': 'binary_expression', 'operator': '*', 'left': {'type': 'identifier', 'name': 'y'}, 'right': {'type': 'number_literal', 'value': '2'}}
+
+DEBUG - Evaluating expression: {'type': 'identifier', 'name': 'y'}
+DEBUG - Identifier 'y' value: 10
+
+DEBUG - Evaluating expression: {'type': 'number_literal', 'value': '2'}
+DEBUG - Number literal value: 2
+DEBUG - Binary operation: 10 * 2 = 20
+DEBUG - Binary operation: 5 + 20 = 25
+DEBUG - Declared variable z = 25
+DEBUG - Current variables: {'x': 5, 'y': 10, 'z': 25}
+
+DEBUG - Executing node: {'type': 'if_statement', 'condition': {'type': 'binary_expression', 'operator': '>', 'left': {'type': 'identifier', 'name': 'z'}, 'right': {'type': 'number_literal', 'value': '20'}}, 'consequent': [{'type': 'print_statement', 'expression': {'type': 'string_literal', 'value': '"z is greater than 20"'}}, {'type': 'expression_statement', 'expression': {'type': 'assignment_expression', 'left': {'type': 'identifier', 'name': 'x'}, 'right': {'type': 'binary_expression', 'operator': '+', 'left': {'type': 'identifier', 'name': 'x'}, 'right': {'type': 'number_literal', 'value': '1'}}}}], 'alternate': [{'type': 'print_statement', 'expression': {'type': 'string_literal', 'value': '"z is 20 or less"'}}, {'type': 'expression_statement', 'expression': {'type': 'assignment_expression', 'left': {'type': 'identifier', 'name': 'y'}, 'right': {'type': 'binary_expression', 'operator': '-', 'left': {'type': 'identifier', 'name': 'y'}, 'right': {'type': 'number_literal', 'value': '1'}}}}]}
+
+DEBUG - Evaluating expression: {'type': 'binary_expression', 'operator': '>', 'left': {'type': 'identifier', 'name': 'z'}, 'right': {'type': 'number_literal', 'value': '20'}}
+
+DEBUG - Evaluating expression: {'type': 'identifier', 'name': 'z'}
+DEBUG - Identifier 'z' value: 25
+
+DEBUG - Evaluating expression: {'type': 'number_literal', 'value': '20'}
+DEBUG - Number literal value: 20
+DEBUG - Binary operation: 25 > 20 = True
+DEBUG - If condition result: True
+DEBUG - Executing if branch
+
+DEBUG - Executing node: {'type': 'print_statement', 'expression': {'type': 'string_literal', 'value': '"z is greater than 20"'}}
+
+DEBUG - Executing print statement
+DEBUG - Print expression: {'type': 'string_literal', 'value': '"z is greater than 20"'}
+DEBUG - Print statement value: z is greater than 20
+DEBUG - Current output buffer: ['z is greater than 20']
+DEBUG - Current variables: {'x': 5, 'y': 10, 'z': 25}
+
+DEBUG - Executing node: {'type': 'expression_statement', 'expression': {'type': 'assignment_expression', 'left': {'type': 'identifier', 'name': 'x'}, 'right': {'type': 'binary_expression', 'operator': '+', 'left': {'type': 'identifier', 'name': 'x'}, 'right': {'type': 'number_literal', 'value': '1'}}}}
+DEBUG - Executing expression statement
+
+DEBUG - Executing node: {'type': 'assignment_expression', 'left': {'type': 'identifier', 'name': 'x'}, 'right': {'type': 'binary_expression', 'operator': '+', 'left': {'type': 'identifier', 'name': 'x'}, 'right': {'type': 'number_literal', 'value': '1'}}}
+
+DEBUG - Evaluating expression: {'type': 'binary_expression', 'operator': '+', 'left': {'type': 'identifier', 'name': 'x'}, 'right': {'type': 'number_literal', 'value': '1'}}
+
+DEBUG - Evaluating expression: {'type': 'identifier', 'name': 'x'}
+DEBUG - Identifier 'x' value: 5
+
+DEBUG - Evaluating expression: {'type': 'number_literal', 'value': '1'}
+DEBUG - Number literal value: 1
+DEBUG - Binary operation: 5 + 1 = 6
+DEBUG - Assigned x = 6
+DEBUG - Current variables: {'x': 6, 'y': 10, 'z': 25}
+DEBUG - Current variables: {'x': 6, 'y': 10, 'z': 25}
+DEBUG - Current variables: {'x': 6, 'y': 10, 'z': 25}
+
+DEBUG - Executing node: {'type': 'while_statement', 'condition': {'type': 'binary_expression', 'operator': '<', 'left': {'type': 'identifier', 'name': 'x'}, 'right': {'type': 'identifier', 'name': 'y'}}, 'body': [{'type': 'expression_statement', 'expression': {'type': 'assignment_expression', 'left': {'type': 'identifier', 'name': 'x'}, 'right': {'type': 'binary_expression', 'operator': '+', 'left': {'type': 'identifier', 'name': 'x'}, 'right': {'type': 'number_literal', 'value': '1'}}}}, {'type': 'print_statement', 'expression': {'type': 'identifier', 'name': 'x'}}]}
+DEBUG - Starting while loop
+
+DEBUG - Evaluating expression: {'type': 'binary_expression', 'operator': '<', 'left': {'type': 'identifier', 'name': 'x'}, 'right': {'type': 'identifier', 'name': 'y'}}
+
+DEBUG - Evaluating expression: {'type': 'identifier', 'name': 'x'}
+DEBUG - Identifier 'x' value: 6
+
+DEBUG - Evaluating expression: {'type': 'identifier', 'name': 'y'}
+DEBUG - Identifier 'y' value: 10
+DEBUG - Binary operation: 6 < 10 = True
+DEBUG - While loop iteration 1
+
+DEBUG - Executing node: {'type': 'expression_statement', 'expression': {'type': 'assignment_expression', 'left': {'type': 'identifier', 'name': 'x'}, 'right': {'type': 'binary_expression', 'operator': '+', 'left': {'type': 'identifier', 'name': 'x'}, 'right': {'type': 'number_literal', 'value': '1'}}}}
+DEBUG - Executing expression statement
+
+DEBUG - Executing node: {'type': 'assignment_expression', 'left': {'type': 'identifier', 'name': 'x'}, 'right': {'type': 'binary_expression', 'operator': '+', 'left': {'type': 'identifier', 'name': 'x'}, 'right': {'type': 'number_literal', 'value': '1'}}}
+
+DEBUG - Evaluating expression: {'type': 'binary_expression', 'operator': '+', 'left': {'type': 'identifier', 'name': 'x'}, 'right': {'type': 'number_literal', 'value': '1'}}
+
+DEBUG - Evaluating expression: {'type': 'identifier', 'name': 'x'}
+DEBUG - Identifier 'x' value: 6
+
+DEBUG - Evaluating expression: {'type': 'number_literal', 'value': '1'}
+DEBUG - Number literal value: 1
+DEBUG - Binary operation: 6 + 1 = 7
+DEBUG - Assigned x = 7
+DEBUG - Current variables: {'x': 7, 'y': 10, 'z': 25}
+DEBUG - Current variables: {'x': 7, 'y': 10, 'z': 25}
+
+DEBUG - Executing node: {'type': 'print_statement', 'expression': {'type': 'identifier', 'name': 'x'}}
+
+DEBUG - Executing print statement
+DEBUG - Print expression: {'type': 'identifier', 'name': 'x'}
+
+DEBUG - Evaluating expression: {'type': 'identifier', 'name': 'x'}
+DEBUG - Identifier 'x' value: 7
+DEBUG - Print statement value: 7
+DEBUG - Current output buffer: ['z is greater than 20', '7']
+DEBUG - Current variables: {'x': 7, 'y': 10, 'z': 25}
+DEBUG - After iteration 1, variables: {'x': 7, 'y': 10, 'z': 25}
+
+DEBUG - Evaluating expression: {'type': 'binary_expression', 'operator': '<', 'left': {'type': 'identifier', 'name': 'x'}, 'right': {'type': 'identifier', 'name': 'y'}}
+
+DEBUG - Evaluating expression: {'type': 'identifier', 'name': 'x'}
+DEBUG - Identifier 'x' value: 7
+
+DEBUG - Evaluating expression: {'type': 'identifier', 'name': 'y'}
+DEBUG - Identifier 'y' value: 10
+DEBUG - Binary operation: 7 < 10 = True
+DEBUG - While loop iteration 2
+
+DEBUG - Executing node: {'type': 'expression_statement', 'expression': {'type': 'assignment_expression', 'left': {'type': 'identifier', 'name': 'x'}, 'right': {'type': 'binary_expression', 'operator': '+', 'left': {'type': 'identifier', 'name': 'x'}, 'right': {'type': 'number_literal', 'value': '1'}}}}
+DEBUG - Executing expression statement
+
+DEBUG - Executing node: {'type': 'assignment_expression', 'left': {'type': 'identifier', 'name': 'x'}, 'right': {'type': 'binary_expression', 'operator': '+', 'left': {'type': 'identifier', 'name': 'x'}, 'right': {'type': 'number_literal', 'value': '1'}}}
+
+DEBUG - Evaluating expression: {'type': 'binary_expression', 'operator': '+', 'left': {'type': 'identifier', 'name': 'x'}, 'right': {'type': 'number_literal', 'value': '1'}}
+
+DEBUG - Evaluating expression: {'type': 'identifier', 'name': 'x'}
+DEBUG - Identifier 'x' value: 7
+
+DEBUG - Evaluating expression: {'type': 'number_literal', 'value': '1'}
+DEBUG - Number literal value: 1
+DEBUG - Binary operation: 7 + 1 = 8
+DEBUG - Assigned x = 8
+DEBUG - Current variables: {'x': 8, 'y': 10, 'z': 25}
+DEBUG - Current variables: {'x': 8, 'y': 10, 'z': 25}
+
+DEBUG - Executing node: {'type': 'print_statement', 'expression': {'type': 'identifier', 'name': 'x'}}
+
+DEBUG - Executing print statement
+DEBUG - Print expression: {'type': 'identifier', 'name': 'x'}
+
+DEBUG - Evaluating expression: {'type': 'identifier', 'name': 'x'}
+DEBUG - Identifier 'x' value: 8
+DEBUG - Print statement value: 8
+DEBUG - Current output buffer: ['z is greater than 20', '7', '8']
+DEBUG - Current variables: {'x': 8, 'y': 10, 'z': 25}
+DEBUG - After iteration 2, variables: {'x': 8, 'y': 10, 'z': 25}
+
+DEBUG - Evaluating expression: {'type': 'binary_expression', 'operator': '<', 'left': {'type': 'identifier', 'name': 'x'}, 'right': {'type': 'identifier', 'name': 'y'}}
+
+DEBUG - Evaluating expression: {'type': 'identifier', 'name': 'x'}
+DEBUG - Identifier 'x' value: 8
+
+DEBUG - Evaluating expression: {'type': 'identifier', 'name': 'y'}
+DEBUG - Identifier 'y' value: 10
+DEBUG - Binary operation: 8 < 10 = True
+DEBUG - While loop iteration 3
+
+DEBUG - Executing node: {'type': 'expression_statement', 'expression': {'type': 'assignment_expression', 'left': {'type': 'identifier', 'name': 'x'}, 'right': {'type': 'binary_expression', 'operator': '+', 'left': {'type': 'identifier', 'name': 'x'}, 'right': {'type': 'number_literal', 'value': '1'}}}}
+DEBUG - Executing expression statement
+
+DEBUG - Executing node: {'type': 'assignment_expression', 'left': {'type': 'identifier', 'name': 'x'}, 'right': {'type': 'binary_expression', 'operator': '+', 'left': {'type': 'identifier', 'name': 'x'}, 'right': {'type': 'number_literal', 'value': '1'}}}
+
+DEBUG - Evaluating expression: {'type': 'binary_expression', 'operator': '+', 'left': {'type': 'identifier', 'name': 'x'}, 'right': {'type': 'number_literal', 'value': '1'}}
+
+DEBUG - Evaluating expression: {'type': 'identifier', 'name': 'x'}
+DEBUG - Identifier 'x' value: 8
+
+DEBUG - Evaluating expression: {'type': 'number_literal', 'value': '1'}
+DEBUG - Number literal value: 1
+DEBUG - Binary operation: 8 + 1 = 9
+DEBUG - Assigned x = 9
+DEBUG - Current variables: {'x': 9, 'y': 10, 'z': 25}
+DEBUG - Current variables: {'x': 9, 'y': 10, 'z': 25}
+
+DEBUG - Executing node: {'type': 'print_statement', 'expression': {'type': 'identifier', 'name': 'x'}}
+
+DEBUG - Executing print statement
+DEBUG - Print expression: {'type': 'identifier', 'name': 'x'}
+
+DEBUG - Evaluating expression: {'type': 'identifier', 'name': 'x'}
+DEBUG - Identifier 'x' value: 9
+DEBUG - Print statement value: 9
+DEBUG - Current output buffer: ['z is greater than 20', '7', '8', '9']
+DEBUG - Current variables: {'x': 9, 'y': 10, 'z': 25}
+DEBUG - After iteration 3, variables: {'x': 9, 'y': 10, 'z': 25}
+
+DEBUG - Evaluating expression: {'type': 'binary_expression', 'operator': '<', 'left': {'type': 'identifier', 'name': 'x'}, 'right': {'type': 'identifier', 'name': 'y'}}
+
+DEBUG - Evaluating expression: {'type': 'identifier', 'name': 'x'}
+DEBUG - Identifier 'x' value: 9
+
+DEBUG - Evaluating expression: {'type': 'identifier', 'name': 'y'}
+DEBUG - Identifier 'y' value: 10
+DEBUG - Binary operation: 9 < 10 = True
+DEBUG - While loop iteration 4
+
+DEBUG - Executing node: {'type': 'expression_statement', 'expression': {'type': 'assignment_expression', 'left': {'type': 'identifier', 'name': 'x'}, 'right': {'type': 'binary_expression', 'operator': '+', 'left': {'type': 'identifier', 'name': 'x'}, 'right': {'type': 'number_literal', 'value': '1'}}}}
+DEBUG - Executing expression statement
+
+DEBUG - Executing node: {'type': 'assignment_expression', 'left': {'type': 'identifier', 'name': 'x'}, 'right': {'type': 'binary_expression', 'operator': '+', 'left': {'type': 'identifier', 'name': 'x'}, 'right': {'type': 'number_literal', 'value': '1'}}}
+
+DEBUG - Evaluating expression: {'type': 'binary_expression', 'operator': '+', 'left': {'type': 'identifier', 'name': 'x'}, 'right': {'type': 'number_literal', 'value': '1'}}
+
+DEBUG - Evaluating expression: {'type': 'identifier', 'name': 'x'}
+DEBUG - Identifier 'x' value: 9
+
+DEBUG - Evaluating expression: {'type': 'number_literal', 'value': '1'}
+DEBUG - Number literal value: 1
+DEBUG - Binary operation: 9 + 1 = 10
+DEBUG - Assigned x = 10
+DEBUG - Current variables: {'x': 10, 'y': 10, 'z': 25}
+DEBUG - Current variables: {'x': 10, 'y': 10, 'z': 25}
+
+DEBUG - Executing node: {'type': 'print_statement', 'expression': {'type': 'identifier', 'name': 'x'}}
+
+DEBUG - Executing print statement
+DEBUG - Print expression: {'type': 'identifier', 'name': 'x'}
+
+DEBUG - Evaluating expression: {'type': 'identifier', 'name': 'x'}
+DEBUG - Identifier 'x' value: 10
+DEBUG - Print statement value: 10
+DEBUG - Current output buffer: ['z is greater than 20', '7', '8', '9', '10']
+DEBUG - Current variables: {'x': 10, 'y': 10, 'z': 25}
+DEBUG - After iteration 4, variables: {'x': 10, 'y': 10, 'z': 25}
+
+DEBUG - Evaluating expression: {'type': 'binary_expression', 'operator': '<', 'left': {'type': 'identifier', 'name': 'x'}, 'right': {'type': 'identifier', 'name': 'y'}}
+
+DEBUG - Evaluating expression: {'type': 'identifier', 'name': 'x'}
+DEBUG - Identifier 'x' value: 10
+
+DEBUG - Evaluating expression: {'type': 'identifier', 'name': 'y'}
+DEBUG - Identifier 'y' value: 10
+DEBUG - Binary operation: 10 < 10 = False
+DEBUG - Current variables: {'x': 10, 'y': 10, 'z': 25}
+
+DEBUG - Executing node: {'type': 'return_statement', 'expression': {'type': 'number_literal', 'value': '0'}}
+DEBUG - Current variables: {'x': 10, 'y': 10, 'z': 25}
+DEBUG - Current variables: {'x': 10, 'y': 10, 'z': 25}
+
+DEBUG - Final variables: {'x': 10, 'y': 10, 'z': 25}
+DEBUG - Final output: ['z is greater than 20', '7', '8', '9', '10']
+
+=== Program Output ===
+z is greater than 20
+7
+8
+9
+10
